@@ -1,0 +1,8 @@
+- hosts: RHEL
+  remote_user: root
+  tasks:
+  - name: Config journal age
+    command: journalctl --vacuum-time=1d
+
+  - name: Set log level to warning
+    command: systemd-analyze set-log-level notice
