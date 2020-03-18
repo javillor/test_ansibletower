@@ -1,0 +1,5 @@
+- hosts: RHEL
+  remote_user: root
+  tasks:
+  - name: Get disk information
+    command: df -h -t xfs
