@@ -1,0 +1,8 @@
+- hosts: RHEL
+  remote_user: root
+  tasks:
+  - name: Enable firewall service
+    command: systemctl enable firewalld
+
+  - name: Start firewall service
+    command: systemctl start firewalld
